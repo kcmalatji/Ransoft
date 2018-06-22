@@ -1,255 +1,376 @@
 <!DOCTYPE html>
-<html>
-<title>Home - Ransoft</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3w.css">
-<link rel="stylesheet" href="google.css">
-<link rel="stylesheet" href="font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-body, html {
-    height: 100%;
-    line-height: 1.8;
-}
-/* Full height image header */
-.bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("img/back.png");
-    min-height: 100%;
-}
-.w3-bar .w3-button {
-    padding: 16px;
-}
-</style>
-<body>
+<html lang="en">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="home.html" class="w3-bar-item w3-button w3-wide">ransoft</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+<head>
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>RanSoft - Home</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/logo-nav.css" rel="stylesheet">
+  <link href="full-slider.css" rel="stylesheet">
+  <link href="text.css" rel="stylesheet">
+
+</head>
+
+<body style="font-family: Lucida console">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.PNG" height="50" width="100" alt="Ransoft">
     </a>
-  </div>
-</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
-  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-   <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">HOME
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team">TEAM</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            SERVICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">PRODUCTS</a>
+            <a class="dropdown-item" href="#">Investors</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">QUERY</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">CAREERS</a>
+        </li>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    </div> 
- 
-</header>
 
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="Chris" style="width:100%">
-        <div class="w3-container">
-          <h3>Chris Malatji</h3>
-          <p class="w3-opacity">CEO & Founder(Full stack Developer)</p>
-          <p>BSc Computer Science</p>
-          <p>passionate developer who enjoys more Backend and being the midle man who combines the two worlds backend and front end, Software engineering is in the bloods of the developers </p>
-          <p><button href="#foot" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home" style="background-color: rgb(49, 160, 57)">
+    <div class="carousel slide" data-interval="3000" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('images/fast.png')">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('images/software.png')">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('images/mobile.png')">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('images/web.png')">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="sp-container">
+      <div class="sp-content">
+        <div class="sp-globe"></div>
+        <h2 class="frame-1">Give your bussiness a little vrrpha in to the digital word</h2>
+        <h2 class="frame-2">with our Quality softwares</h2>
+        <h2 class="frame-3">Mobile solutions</h2>
+        <h2 class="frame-4">Websites and Web-Apps</h2>
+        <h2 class="frame-5">
+          <span>welcome,</span>
+          <span>to the,</span>
+          <span>future.</span>
+        </h2>
+        <a class="sp-circle-link" href="https://ransoft.co.za">Ransoft</a>
+      </div>
+    </div>
+  </header>
+  <div class="container" style="padding-top: 1%">
+    <div class="row">
+      <div class="col-md-5">
+
+      </div>
+      <div class="col-md-4">
+        <h1>How we worK</h1>
+
+      </div>
+      <div class="col-md-4">
+
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            You come to us, with your software specification we both sit down and strategise on the technologies that may best suit your
+            software needs.
+          </h3>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            We sign none discloser contract and agreements. we make use of agile methodologies and DevOps princeples in other to produce
+            quality product.
+          </h3>
         </div>
       </div>
     </div>
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Sheperd" style="width:100%">
-        <div class="w3-container">
-          <h3>Sheperd Mpulwane</h3>
-          <p class="w3-opacity">CTO(Full stack Developer)</p>
-          <p>BSc Computer Science</p>
-          <p>Gifted developer who beleives that oneday south african digital skills will rise above the silicorn valley and become the center of tech world wide, this guy enjoy frontend teck and databases </p>
-          <p><button href="#foot" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+  </div>
+  <div class="container">
+    <hr />
+  </div>
+  <div class="container" style="padding-top: 1%">
+    <div class="row">
+      <div class="col-md-3" style="border: 10pt;border-color: black">
+        <img src="images/mobile.png" height="150px">
+        <h4>MOBILE - APPS</h4>
+        <p>
+          A quick way and to communicate with your customers and clients.
+        </p>
+        <a href="#mobile">Enquire ....</a>
+      </div>
+      <div class="col-md-3">
+        <img src="images/fast.png" height="150px">
+        <h4>WEB - APPLICATIONS</h4>
+        <p>
+          Powerful Software on the web, write once run everywhere.
+        </p>
+        <a href="#mobile">Enquire ....</a>
+      </div>
+      <div class="col-md-3">
+        <img src="images/Web.png" height="150px">
+        <h4>WEBSITES</h4>
+        <p>
+          A great way of advertising your business and keeping ...
+        </p>
+        <a href="#mobile">Enquire ....</a>
+      </div>
+      <div class="col-md-3">
+        <img src="images/software.png" height="150px">
+        <h5>DESKTOP - SOFTWARE</h5>
+        <p>
+          A more secure, and a powerful way to maanage your business
+        </p>
+        <a href="#mobile">Enquire ....</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="container">
+    <hr />
+  </div>
+  <div class="container" style="padding:28px 16px" id="team">
+    <h3 class="center">
+      <center>THE TEAM</center>
+    </h3>
+    <p class="center large">
+      <center>Heads of technology</center>
+    </p>
+    <div class="row" style="margin-top:64px">
+      <div class="col-md-4 margin-bottom">
+        <div class="card">
+          <img src="https://lh3.googleusercontent.com/6mwNVoIUOHGXw5P1sCvvKlO1mU2xc7Pcq1FP-AG0LDE76bAR2r8UpfAXMxWaYQCxnaCi0sOBLSBMnxA2SKi98nmT5HcFpyK2J7jEFPaeIvsAFUBxjtGEehx476GGirZYJ35grUj9DgoKw3c0_vgjfX2Oki_4nWnB-HK1WN-j2EXnnN1EqjT2sUJJU8yxfrf0-ll1w8Fb8t0iXCwKUquDWeaTQ0VVrcH3dUmRi-AOmlHbtRuu_r_On-Jn6BlK8rxqxGqLeCFXhVRJf9a5ZtBm5Dxfin_50tGMvqoyiy6qZZcEbpFhw3zzZtHZV2ByRLmiGeK3fWDrYQn02zAXPXHIII5AAz0nWhfAYv8IxeAwywLty87i1nBOOHWlRJKoDjZdfBBIxlTjXIaU85vhn59Y5erCNqmSTYmDEZ-hpFUEghF69m8mXzFt7vSc2Cuw8NER1jIA-725ez7JEIi4270LhezpVRjP6dqiFZoMRUGSPCEHvj6cPsRNNVHkErI3FKYVlJ9p_KIagCjIfgybB8iqVjyauYfAiDIUxJWCP32YqcXaINa-HQEkmBz7eq_ghWUOAumLMz6ZBvVjkW9uH-E87Ox-AmtbVEvM=s480-no"
+            alt="Chris" style="width:50%">
+          <div class="container">
+            <h3>Chris Malatji</h3>
+            <p class="opacity">CEO & Founder(Full stack Developer)</p>
+            <p>BSc Computer Science</p>
+            <p>passionate developer who enjoys more Backend and being the midle man who combines the two worlds backend and
+              front end, Software engineering is in the bloods of the developers </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 margin-bottom">
+        <div class="card">
+          <img src="images/hhh.jpg" alt="Sheperd" style="width:44%">
+          <div class="container">
+            <h3>Sheperd Mpulwane</h3>
+            <p class="opacity">CTO(Full stack Developer)</p>
+            <p>BSc Computer Science</p>
+            <p>Gifted developer who beleives that oneday south african digital skills will rise above the silicorn valley and
+              become the center of tech world wide, this guy enjoy frontend tech and databases </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 margin-bottom">
+        <div class="  card">
+          <img src="images/Webp.net-resizeimage.png" alt="Mmabatho" style="width:44%">
+          <div class="  container">
+            <h3>Mmabatho Petersen</h3>
+            <p class="  opacity">Marketing</p>
+            <p>BSc Computer Science</p>
+            <p>Passionate about technology and highly innovative soul who always bring great ideas to the table and see them
+              through as they are implemented, always willing to solve real life problems with technology</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <hr />
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer" style="background-color: grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <p>
+            <b>Platforms</b>
+          </p>
+          <ul>
+            <li>
+              Linux
+            </li>
+            <li>
+              Android
+            </li>
+            <li>
+              IOS
+            </li>
+            <li>
+              Web
+            </li>
+            <li>
+              Microsoft
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <p>
+            <b>Connect</b>
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/ransoft.co.za/">
+                <i class="fa fa-facebook" style="font-size:20px;color:blue" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="whatsapp://send?text=Hello I need a qoute!&amp;phone=+27814451351">
+                <i class="fa fa-whatsapp" style="font-size:20px;color:green" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/chris-malatji-907163112/">
+                <i class="fa fa-linkedin" style="font-size:20px;color:blue" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+
+
+
+
+
+
+        </div>
+        <div class="col-md-2">
+          <p>
+            <b>Partners</b>
+          </p>
+          <p>we currently don't have partners</p>
+        </div>
+        <style>
+        
+        </style>
+        <div class="col-md-2" >
+          <p>
+            <b>Company</b>
+          </p>
+          <ul>
+            <li>
+              <a href="#">careers</a>
+            </li>
+            <li>
+              <a href="#">Company news</a>
+            </li>
+            <li>
+              <a href="#">History</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2" style="font-size: 15px">
+          <p>
+            <b>Our Projects</b>
+          </p>
+          <ul>
+            <li>
+              Tutor-Bot (AI)
+            </li>
+            <li>
+              Bid-Bot (AI)
+            </li>
+            <li>
+              Budget-Pig (Mobile)
+            </li>
+            <li>
+              Rantune (Web)
+            </li>
+            <li>
+              Smart-Edu (Web)
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="w3-col l4 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Vacant" style="width:100%">
-        <div class="w3-container">
-          <h3>Vacant position</h3>
-          <p class="w3-opacity">Marketing</p>
-          <p>preferably technical backgroud will do</p>
-          <p>we not asking much just a talented technical person who has an eye for branding, quality and most of all marketing skills</p>
-          <p><button href="#foot" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
+    <div class="container">
+      <hr />
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </div>
-</div>
-
-<!-- Work Section -->
-<div class="w3-container" style="padding:10px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What we are bussy with</p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="img/Untitled Diagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="web applications">
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://Ransoft.co.za/"> Ransoft.co.za</a>
     </div>
-    <div class="w3-col l3 m6">
-      <img src="img/Untitled Diagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="web applications">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="img/Untitled Diagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="web applications">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="img/Untitled Diagram.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="web applications">
-    </div>
-  </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 
 
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>
-          we are highly skilled developers who has commercial experience in building softwares for large companies as employees
-          <br/>
-           our skillset revolve arround web applications, mobile applications, desktop softwares, linux applications, websites, Blogs
-           <br/>
-           we are always happy to take on new projects and see them to completion we are glad to help african bussines reachout to the world
-           <br/>
-           as much as the vrrphas are trending lets help your business get that vrrpha in to the digital world and be ahead of your competitors
-      </p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Software Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:100%">100%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:100%">100%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Backend</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:100%">100%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-mobile w3-margin-right"></i>Mobile</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64" id="foot">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/util.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <div class="w3-xlarge w3-section">
-    <div class="contact100-form-social flex-c-m">
-      <a href="https://www.facebook.com/brillientmind.co.za/" class="contact100-form-social-item flex-c-m bg1 m-r-5">
-        <i class="fa fa-facebook-f" aria-hidden="true"></i>
-      </a>
-
-                
-      <a href="whatsapp://send?text=Hello I need a qoute!&amp;phone=+27814451351" class="contact100-form-social-item flex-c-m bg2 m-r-5">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/chris-malatji-907163112/" class="contact100-form-social-item flex-c-m bg3">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
- 
-</footer>
- 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
-    }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

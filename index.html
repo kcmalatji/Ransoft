@@ -1,189 +1,277 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-230979892-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
-  gtag('config', 'UA-230979892-1');
-</script>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="codepixer">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Ransoft - Home</title>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+<!-- *******************************************************************************************
+   * TODO(DEVELOPER): Paste the initialization snippet from this dialog box:
+   * Firebase Console > Project Settings > Add App > Web.
+   ***************************************************************************************** -->
+<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-230979892-1">
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
+		gtag('config', 'UA-230979892-1');
+	</script>
+
+<script type="text/javascript">
+
+
+	const firebaseConfig = {
+		apiKey: "AIzaSyAAo7Eh_WYxhFFLjgsodkcerhok5Dq_E0o",
+		authDomain: "click2eat-53585.firebaseapp.com",
+		databaseURL: "https://click2eat-53585-default-rtdb.firebaseio.com",
+		projectId: "click2eat-53585",
+		storageBucket: "click2eat-53585.appspot.com",
+		messagingSenderId: "33502587999",
+		appId: "1:33502587999:web:a04fdb73a52274b50a3fea",
+		measurementId: "G-2N2W7DGY9K"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	var db = firebase.firestore();
+	var users = db.collection("ransoftqueries");
+	var userRef = db.collection("ransoftqueries")
+
+
+	function register() {
+alert("Registering ");
+		var userName = document.getElementById("qname").value
+		var userCell = document.getElementById("qcell").value
+		var email = document.getElementById("qemail").value
+		var query = document.getElementById("query").value
+		var status = "open"
+		userRef.add({
+			name: userName,
+			cell: userCell,
+			email: email,
+			query: query,
+			status: status
+
+		}).then(ref => {
+			console.log('document ID: ', ref.id);
+			alert("Query Sent");
+		});
+
+
+
+	}
+
+</script>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Ransoft - Home</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/nice-select.css">					
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/owl.carousel.css">
-			<link rel="stylesheet" href="css/main.css">
-			<link rel="stylesheet" href="css/ransoft.css">
-		</head>
-		<body>
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/ransoft.css">
+</head>
 
-			  <header id="header" id="home">
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.jpg" alt="" title="" width="70px" height="50px" />Ransoft</a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-						  <li class="menu-active"><a href="#home">Home</a></li>
-						  <!-- <li><a href="#team">Team</a></li> -->
-				          <li><a href="#offer">Services</a></li>
-				        	
-				          <li><a href="pricing.html">Pricing</a></li>
-<!-- 				          <li><a href="#blog">Blog</a></li> -->
-				          <li class="menu-has-children">Contact
-				            <ul>
+<body>
+
+	<header id="header" id="home">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.jpg" alt="" title="" width="70px"
+							height="50px" />Ransoft</a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="#home">Home</a></li>
+						<!-- <li><a href="#team">Team</a></li> -->
+						<li><a href="#offer">Services</a></li>
+
+						<li><a href="pricing.html">Pricing</a></li>
+						<!-- 				          <li><a href="#blog">Blog</a></li> -->
+						<li class="menu-has-children">Contact
+							<ul>
 								<li><a data-toggle="modal" data-target="#myModal">Raise a Query</a></li>
 								<li><a data-toggle="modal" data-target="#qouteModal">Request a Qoute</a></li>
-				            </ul>
-						  </li>
-						  <li><a href="downloads.html">Downloads</a></li>
-						  <li><a href="about.html">About</a></li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
+							</ul>
+						</li>
+						<li><a href="downloads.html">Downloads</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header><!-- #header -->
 
 
-			<!-- start banner Area -->
-			<section class="banner-area" id="home">	
-				<div class="container">
-					<div class="row fullscreen d-flex align-items-center justify-content-center">
-						<div class="banner-content col-lg-7">
-							<h1>
-								Respect a nerd			
-							</h1>	
-							<p class="pt-20 pb-20">
-								A place where passion meets work. We re-imagine the possible through innovative technology.
-							</p>
-							<div></div>
-						</div>											
+	<!-- start banner Area -->
+	<section class="banner-area" id="home">
+		<div class="container">
+			<div class="row fullscreen d-flex align-items-center justify-content-center">
+				<div class="banner-content col-lg-7">
+					<h1>
+						Respect a nerd
+					</h1>
+					<p class="pt-20 pb-20">
+						A place where passion meets work. We re-imagine the possible through innovative technology.
+					</p>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+	<!-- Start latest-blog Area -->
+	<section class="latest-blog-area " id="offer">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">What we offer</h1>
+						<p>We are extremely in love with eco friendly system.</p>
 					</div>
 				</div>
-			</section>
-			<!-- End banner Area -->	
-			<!-- Start latest-blog Area -->
-			<section class="latest-blog-area " id="offer">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">What we offer</h1>
-								<p>We are extremely in love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>					
-					<div class="row">
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="img/mb.jpg" alt="">
-							<br/>
-							<br/>
-							<a><h4>MOBILE - APPS</h4></a></center>
-							<p>
-								A quick way and to communicate with your customers and clients.
-							</p>
-							
-						</div>
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="img/fast.png" alt="">
-							<br/>
-							<br/>
-							<a><h4>WEB - APPLICATIONS</h4></a></center>
-							<p>
-								Powerful Software on the web, write once run everywhere.
-							</p>
-							
-						</div>	
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="img/Web.png" alt="">
-							<br/>
-							<a><h4>WEBSITES</h4></a></center>
-							<p>
-								A great way of advertising your business and keeping
-							</p>
-							
-						</div>	
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="img/software.png" alt="">
-							<br/>
-							<br/>
-							<a><h4>DESKTOP - SOFTWARE</h4></a></center>
-							<p>
-								A more secure, and a powerful way to maanage your business
-							</p>
-							
-						</div>	
-					</div>
-					<div class="row">
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/1693/1693746.png" alt="">
-							<br/>
-							<br/>
-							<a><h4>Artificial Inteligence</h4></a></center>
-							<p>
-								we help you to add a chatbot to your website 
-							</p>
-							
-						</div>
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="https://www.pngfind.com/pngs/m/69-698301_thx-mobile-consulting-icon-png-transparent-png.png" alt="">
-							<br/>
-							<br/>
-							<a><h4>Software Consulting</h4></a></center>
-							<p>
-								Is your team strugling to finish up a project , Hire our team of expects 
-							</p>
-							
-						</div>	
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="https://www.consnet.co.za/wp-content/uploads/2019/07/support.jpg" alt="">
-							<br/>
-							<a><h4>Software Support</h4></a></center>
-							<p>
-								we help your business troubleshoot software errors and increase uptime 
-							</p>
-							
-						</div>	
-						<div class="col-lg-3 single-blog">
-							<center><img class="img-fluid" src="https://media.istockphoto.com/vectors/loading-process-update-system-icon-concept-of-upgrade-application-vector-id1171666532?k=20&m=1171666532&s=612x612&w=0&h=4JY6BEGDMdXezIoQO-dh0OetYtRdMOOffigyfc3-sIg=" alt="">
-							<br/>
-							<br/>
-							<a><h4>Software Update/ Upgrade</h4></a></center>
-							<p>
-								We can help you add more feature to your existing software if you have the source code
-							</p>
-							
-						</div>	
-					</div>
-				</div>	
-			</section>
-			<!-- Start we-offer Area 
+			</div>
+			<div class="row">
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid" src="img/mb.jpg" alt="">
+						<br />
+						<br />
+						<a>
+							<h4>MOBILE - APPS</h4>
+						</a>
+					</center>
+					<p>
+						A quick way and to communicate with your customers and clients.
+					</p>
+
+				</div>
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid" src="img/fast.png" alt="">
+						<br />
+						<br />
+						<a>
+							<h4>WEB - APPLICATIONS</h4>
+						</a>
+					</center>
+					<p>
+						Powerful Software on the web, write once run everywhere.
+					</p>
+
+				</div>
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid" src="img/Web.png" alt="">
+						<br />
+						<a>
+							<h4>WEBSITES</h4>
+						</a>
+					</center>
+					<p>
+						A great way of advertising your business and keeping
+					</p>
+
+				</div>
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid" src="img/software.png" alt="">
+						<br />
+						<br />
+						<a>
+							<h4>DESKTOP - SOFTWARE</h4>
+						</a>
+					</center>
+					<p>
+						A more secure, and a powerful way to maanage your business
+					</p>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/1693/1693746.png" alt="">
+						<br />
+						<br />
+						<a>
+							<h4>Artificial Inteligence</h4>
+						</a>
+					</center>
+					<p>
+						we help you to add a chatbot to your website
+					</p>
+
+				</div>
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid"
+							src="https://www.pngfind.com/pngs/m/69-698301_thx-mobile-consulting-icon-png-transparent-png.png"
+							alt="">
+						<br />
+						<br />
+						<a>
+							<h4>Software Consulting</h4>
+						</a>
+					</center>
+					<p>
+						Is your team strugling to finish up a project , Hire our team of expects
+					</p>
+
+				</div>
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid"
+							src="https://www.consnet.co.za/wp-content/uploads/2019/07/support.jpg" alt="">
+						<br />
+						<a>
+							<h4>Software Support</h4>
+						</a>
+					</center>
+					<p>
+						we help your business troubleshoot software errors and increase uptime
+					</p>
+
+				</div>
+				<div class="col-lg-3 single-blog">
+					<center><img class="img-fluid"
+							src="https://media.istockphoto.com/vectors/loading-process-update-system-icon-concept-of-upgrade-application-vector-id1171666532?k=20&m=1171666532&s=612x612&w=0&h=4JY6BEGDMdXezIoQO-dh0OetYtRdMOOffigyfc3-sIg="
+							alt="">
+						<br />
+						<br />
+						<a>
+							<h4>Software Update/ Upgrade</h4>
+						</a>
+					</center>
+					<p>
+						We can help you add more feature to your existing software if you have the source code
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Start we-offer Area 
 			<section class="we-offer-area" >
 				<div class="container">
 					<div class="row d-flex justify-content-center">
@@ -251,10 +339,10 @@
 					</div>
 				</div>	
 			</section>-->
-			<!-- End we-offer Area -->
-			
+	<!-- End we-offer Area -->
 
-			<!-- Start testomial Area
+
+	<!-- Start testomial Area
 			<section class="testomial-area section-gap" id="team">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
@@ -311,88 +399,95 @@
 					</div>
 				</div>	
 			</section> -->
-			<!-- End testomial Area -->
-			
+	<!-- End testomial Area -->
 
-			<!-- End latest-blog Area -->
-			
 
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4  col-md-12">
-							<div class="single-footer-widget">
-								<h6>Top Plartforms</h6>
-								<ul class="footer-nav">
-									<li><a href="#">Linux</a></li>
-									<li><a href="#">Android</a></li>
-									<li><a href="#">IOS</a></li>
-									<li><a href="#">OSX(UNIX)</a></li>
-									<li><a href="#">Windows</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-4  col-md-12">
-							<div class="single-footer-widget">
-								<h6>Top Languages</h6>
-								<ul class="footer-nav">
-									<li><a href="#">Javascript</a></li>
-									<li><a href="#">Java</a></li>
-									<li><a href="#">Node</a></li>
-									<li><a href="#">Angualr</a></li>
-									<li><a href="#">Python</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-4  col-md-12">
-							<div class="single-footer-widget">
-								<h6>Our Site</h6>
-								<ul class="footer-nav">
-									<li><a href="careers.html">Careers</a></li>
-									<li><a href="partners.html">Partners</a></li>
-									<li><a href="sponsor.html">Investors</a></li>
-									
-								</ul>
-							</div>
-						</div>
-											
-					</div>
+	<!-- End latest-blog Area -->
 
-					<div class="row footer-bottom d-flex justify-content-between">
-						<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a href="http://www.ransoft.co.za">Ransoft</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
-						<div class="col-lg-4 col-sm-12 footer-social">
-							<a href="https://www.facebook.com/ransoft.co.za"><i class="fa fa-facebook"></i></a>
-							<a href="whatsapp://send?text=Hello I need a qoute!&amp;phone=+27814451351"><i class="fa fa-whatsapp"></i></a>
-							<a href="https://www.linkedin.com/in/chris-malatji-907163112/"><i class="fa fa-linkedin"></i></a>
-							
-						</div>
+
+	<!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4  col-md-12">
+					<div class="single-footer-widget">
+						<h6>Top Plartforms</h6>
+						<ul class="footer-nav">
+							<li><a href="#">Linux</a></li>
+							<li><a href="#">Android</a></li>
+							<li><a href="#">IOS</a></li>
+							<li><a href="#">OSX(UNIX)</a></li>
+							<li><a href="#">Windows</a></li>
+						</ul>
 					</div>
 				</div>
-			</footer>
-			<!-- End footer Area -->		
+				<div class="col-lg-4  col-md-12">
+					<div class="single-footer-widget">
+						<h6>Top Languages</h6>
+						<ul class="footer-nav">
+							<li><a href="#">Javascript</a></li>
+							<li><a href="#">Java</a></li>
+							<li><a href="#">Node</a></li>
+							<li><a href="#">Angualr</a></li>
+							<li><a href="#">Python</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-12">
+					<div class="single-footer-widget">
+						<h6>Our Site</h6>
+						<ul class="footer-nav">
+							<li><a href="careers.html">Careers</a></li>
+							<li><a href="partners.html">Partners</a></li>
+							<li><a href="sponsor.html">Investors</a></li>
 
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>			
-			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script src="js/easing.min.js"></script>			
-			<script src="js/hoverIntent.js"></script>
-			<script src="js/superfish.min.js"></script>	
-			<script src="js/jquery.ajaxchimp.min.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>	
-			<script src="js/owl.carousel.min.js"></script>			
-			<script src="js/jquery.sticky.js"></script>
-			<script src="js/jquery.nice-select.min.js"></script>			
-			<script src="js/parallax.min.js"></script>		
-			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>	
-		</body>
-	</html>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row footer-bottom d-flex justify-content-between">
+				<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> by <a
+						href="http://www.ransoft.co.za">Ransoft</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+				<div class="col-lg-4 col-sm-12 footer-social">
+					<a href="https://www.facebook.com/ransoft.co.za"><i class="fa fa-facebook"></i></a>
+					<a href="whatsapp://send?text=Hello I need a qoute!&amp;phone=+27814451351"><i
+							class="fa fa-whatsapp"></i></a>
+					<a href="https://www.linkedin.com/in/chris-malatji-907163112/"><i class="fa fa-linkedin"></i></a>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
 
 
 
@@ -408,21 +503,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a
 			<div class="modal-body">
 				<div class="form-group">
 					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name">
+					<input type="text" class="form-control" id="qname">
 				</div>
 				<div class="form-group">
 					<label for="cell">CellPhone:</label>
-					<input type="number" class="form-control" id="cell">
+					<input type="number" class="form-control" id="qcell">
 				</div>
 				<div class="form-group">
 					<label for="email">Email address:</label>
-					<input type="email" class="form-control" id="email">
+					<input type="email" class="form-control" id="qemail">
 				</div>
 				<div class="form-group">
 					<label for="comment">Query:</label>
 					<textarea class="form-control" rows="3" id="query"></textarea>
 				</div>
-				<button type="submit" class="btn btn-success btn-block">Submit</button>
+				<button type="submit" class="btn btn-success btn-block"  data-dismiss="modal" onclick="register()">Submit</button>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Cancel</button>
@@ -473,7 +568,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a
 					<label for="comment">Brief Description of Service Required:</label>
 					<textarea class="form-control" rows="2" id="description"></textarea>
 				</div>
-				<b><p>Ignore the below Section,  If You require Service</p></b>
+				<b>
+					<p>Ignore the below Section, If You require Service</p>
+				</b>
 				<label class="checkbox-inline"><input type="checkbox" value="hosting"> Require Hosting. </label>
 				<label class="checkbox-inline"><input type="checkbox" value="domain"> Require Domain </label>
 				<label class="checkbox-inline"><input type="checkbox" value="code"> Require Source code</label>
@@ -490,3 +587,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a
 	</div>
 </div>
 </div>
+
+

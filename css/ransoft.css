@@ -2,11 +2,11 @@ div.single-testimonial img{
 	
 }
 ul.nav-menu li a:focus{
-	color:red;
+	/* color:red; */
 }
 
 ul.nav-menu li a:active,ul.nav-menu li a:hover{
-	color:maroon;
+	/* color:maroon; */
 }
 img.img-fluid{
 	width:50%;

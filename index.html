@@ -1,6 +1,16 @@
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-230979892-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-230979892-1');
+</script>
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
@@ -36,24 +46,24 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.PNG" alt="" title="" width="120px" height="60px" /></a>
+				        <a href="index.html"><img src="img/logo.jpg" alt="" title="" width="70px" height="50px" />Ransoft</a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 						  <li class="menu-active"><a href="#home">Home</a></li>
-						  <li><a href="#team">Team</a></li>
-				          <li><a href="#offer">We Offer</a></li>
+						  <!-- <li><a href="#team">Team</a></li> -->
+				          <li><a href="#offer">Services</a></li>
 				        	
-				          <li><a href="#price">Pricing</a></li>
+				          <li><a href="pricing.html">Pricing</a></li>
 <!-- 				          <li><a href="#blog">Blog</a></li> -->
-				          <li class="menu-has-children"><a href="">Contact</a>
+				          <li class="menu-has-children">Contact
 				            <ul>
-				              <li><a href="#">Raise a Query</a></li>
-				              <li><a href="#">Request a Qoute</a></li>
+								<li><a data-toggle="modal" data-target="#myModal">Raise a Query</a></li>
+								<li><a data-toggle="modal" data-target="#qouteModal">Request a Qoute</a></li>
 				            </ul>
 						  </li>
-						  <li><a href="#project">Downloads</a></li>
-						  <li><a href="#about">About</a></li>
+						  <li><a href="downloads.html">Downloads</a></li>
+						  <li><a href="about.html">About</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
 			    	</div>
@@ -78,9 +88,103 @@
 				</div>
 			</section>
 			<!-- End banner Area -->	
-
-			<!-- Start we-offer Area -->
-			<section class="we-offer-area section-gap" >
+			<!-- Start latest-blog Area -->
+			<section class="latest-blog-area " id="offer">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">What we offer</h1>
+								<p>We are extremely in love with eco friendly system.</p>
+							</div>
+						</div>
+					</div>					
+					<div class="row">
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="img/mb.jpg" alt="">
+							<br/>
+							<br/>
+							<a><h4>MOBILE - APPS</h4></a></center>
+							<p>
+								A quick way and to communicate with your customers and clients.
+							</p>
+							
+						</div>
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="img/fast.png" alt="">
+							<br/>
+							<br/>
+							<a><h4>WEB - APPLICATIONS</h4></a></center>
+							<p>
+								Powerful Software on the web, write once run everywhere.
+							</p>
+							
+						</div>	
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="img/Web.png" alt="">
+							<br/>
+							<a><h4>WEBSITES</h4></a></center>
+							<p>
+								A great way of advertising your business and keeping
+							</p>
+							
+						</div>	
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="img/software.png" alt="">
+							<br/>
+							<br/>
+							<a><h4>DESKTOP - SOFTWARE</h4></a></center>
+							<p>
+								A more secure, and a powerful way to maanage your business
+							</p>
+							
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/1693/1693746.png" alt="">
+							<br/>
+							<br/>
+							<a><h4>Artificial Inteligence</h4></a></center>
+							<p>
+								we help you to add a chatbot to your website 
+							</p>
+							
+						</div>
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="https://www.pngfind.com/pngs/m/69-698301_thx-mobile-consulting-icon-png-transparent-png.png" alt="">
+							<br/>
+							<br/>
+							<a><h4>Software Consulting</h4></a></center>
+							<p>
+								Is your team strugling to finish up a project , Hire our team of expects 
+							</p>
+							
+						</div>	
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="https://www.consnet.co.za/wp-content/uploads/2019/07/support.jpg" alt="">
+							<br/>
+							<a><h4>Software Support</h4></a></center>
+							<p>
+								we help your business troubleshoot software errors and increase uptime 
+							</p>
+							
+						</div>	
+						<div class="col-lg-3 single-blog">
+							<center><img class="img-fluid" src="https://media.istockphoto.com/vectors/loading-process-update-system-icon-concept-of-upgrade-application-vector-id1171666532?k=20&m=1171666532&s=612x612&w=0&h=4JY6BEGDMdXezIoQO-dh0OetYtRdMOOffigyfc3-sIg=" alt="">
+							<br/>
+							<br/>
+							<a><h4>Software Update/ Upgrade</h4></a></center>
+							<p>
+								We can help you add more feature to your existing software if you have the source code
+							</p>
+							
+						</div>	
+					</div>
+				</div>	
+			</section>
+			<!-- Start we-offer Area 
+			<section class="we-offer-area" >
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-10">
@@ -146,11 +250,11 @@
 						</div>												
 					</div>
 				</div>	
-			</section>
+			</section>-->
 			<!-- End we-offer Area -->
 			
 
-			<!-- Start testomial Area -->
+			<!-- Start testomial Area
 			<section class="testomial-area section-gap" id="team">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
@@ -170,99 +274,46 @@
 								</p>
 								<h4>Chris Malatji</h4>
 								<p>
-									CEO at Ransoft
+									CEO/Senior Developer at Ransoft
 								</p>
 								<p>
 									BSc Computer Science
 								</p>
 							</div>
 							<div class="single-testimonial item">
-								<img class="mx-auto"src="img/shephard.JPG"   height="200" width="200"alt="">
+								<img class="mx-auto"src="img/vacant.jpeg"   height="200" width="200"alt="">
 								<p class="desc">
 							     Gifted developer who beleives that oneday south african digital skills will rise above the silicorn valley and become the center of tech world wide, this guy enjoy front-end tech and databases
 								</p>
-								<h4>Shephard Mpulwane</h4>
+								<h4>Vacant</h4>
 								<p>
 								Full stack Developer at Ransoft
 								</p>
 								<p>
-									BSc Computer Science
+									SME
 								</p>
 							</div>
 							<div class="single-testimonial item">
-								<img class="mx-auto" src="img/Mabatho.jpg"  width="200" height="200" alt="">
+								<img class="mx-auto" src="img/vacant.jpeg"  width="200" height="200" alt="">
 								<p class="desc">
 								Passionate about technology and highly innovative soul who always bring great ideas to the table and see them through as they are implemented, always willing to solve real life problems with technology
 								</p>
-								<h4>Mmabatho Peterson</h4>
+								<h4>Vacant</h4>
 								<p>
 									PR & Marketing at Ransoft
 								</p>
 								<p>
-									BSc Computer Science
+									SME
 								</p>
 							</div>	
 																		
 						</div>
 					</div>
 				</div>	
-			</section>
+			</section> -->
 			<!-- End testomial Area -->
 			
-			<!-- Start latest-blog Area -->
-			<section class="latest-blog-area section-gap" id="offer">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">What we offer</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>					
-					<div class="row">
-						<div class="col-lg-3 single-blog">
-							<img class="img-fluid" src="img/mb.jpg" alt="">
-							<br/>
-							<br/>
-							<a><h4>MOBILE - APPS</h4></a>
-							<p>
-								A quick way and to communicate with your customers and clients.
-							</p>
-							
-						</div>
-						<div class="col-lg-3 single-blog">
-							<img class="img-fluid" src="img/fast.png" alt="">
-							<br/>
-							<br/>
-							<a><h4>WEB - APPLICATIONS</h4></a>
-							<p>
-								Powerful Software on the web, write once run everywhere.
-							</p>
-							
-						</div>	
-						<div class="col-lg-3 single-blog">
-							<img class="img-fluid" src="img/Web.png" alt="">
-							<br/>
-							<a><h4>WEBSITES</h4></a>
-							<p>
-								A great way of advertising your business and keeping
-							</p>
-							
-						</div>	
-						<div class="col-lg-3 single-blog">
-							<img class="img-fluid" src="img/software.png" alt="">
-							<br/>
-							<br/>
-							<a><h4>DESKTOP - SOFTWARE</h4></a>
-							<p>
-								A more secure, and a powerful way to maanage your business
-							</p>
-							
-						</div>	
-					</div>
-				</div>	
-			</section>
+
 			<!-- End latest-blog Area -->
 			
 
@@ -298,9 +349,9 @@
 							<div class="single-footer-widget">
 								<h6>Our Site</h6>
 								<ul class="footer-nav">
-									<li><a href="#">Careers</a></li>
-									<li><a href="#">Partners</a></li>
-									<li><a href="#">Investors</a></li>
+									<li><a href="careers.html">Careers</a></li>
+									<li><a href="partners.html">Partners</a></li>
+									<li><a href="sponsor.html">Investors</a></li>
 									
 								</ul>
 							</div>
@@ -311,7 +362,7 @@
 					<div class="row footer-bottom d-flex justify-content-between">
 						<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a href="/" target="_blank">Ransoft</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a href="http://www.ransoft.co.za">Ransoft</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
 						<div class="col-lg-4 col-sm-12 footer-social">
@@ -345,3 +396,97 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> by <a
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<h4 class="modal-title">Get In Touch</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="form-group">
+					<label for="cell">CellPhone:</label>
+					<input type="number" class="form-control" id="cell">
+				</div>
+				<div class="form-group">
+					<label for="email">Email address:</label>
+					<input type="email" class="form-control" id="email">
+				</div>
+				<div class="form-group">
+					<label for="comment">Query:</label>
+					<textarea class="form-control" rows="3" id="query"></textarea>
+				</div>
+				<button type="submit" class="btn btn-success btn-block">Submit</button>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="qouteModal" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<h4 class="modal-title">Request Qoute</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="form-group">
+					<label for="cell">CellPhone:</label>
+					<input type="number" class="form-control" id="cell">
+				</div>
+				<div class="form-group">
+					<label for="email">Email address:</label>
+					<input type="email" class="form-control" id="email">
+				</div>
+				<div class="form-group">
+					<label for="service">What would You like to build</label>
+					<select class="form-control" id="service">
+						<option>Mobile app</option>
+						<option>Desktop Software</option>
+						<option>website</option>
+						<option>Intergration and Artificial intelligence</option>
+						<option>Web Application</option>
+						<option>Software Consulting</option>
+						<option>Software Updates/Upgrade</option>
+						<option>Software Support</option>
+						<option>Other</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="comment">Brief Description of Service Required:</label>
+					<textarea class="form-control" rows="2" id="description"></textarea>
+				</div>
+				<b><p>Ignore the below Section,  If You require Service</p></b>
+				<label class="checkbox-inline"><input type="checkbox" value="hosting"> Require Hosting. </label>
+				<label class="checkbox-inline"><input type="checkbox" value="domain"> Require Domain </label>
+				<label class="checkbox-inline"><input type="checkbox" value="code"> Require Source code</label>
+				<div class="form-group">
+					<label for="cell">Brief System Proposal :</label>
+					<input type="file" class="form-control" id="proposal">
+				</div>
+				<button type="submit" class="btn btn-success btn-block">Submit</button>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

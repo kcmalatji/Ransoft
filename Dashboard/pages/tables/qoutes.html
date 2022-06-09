@@ -144,11 +144,15 @@
                     <th>name</th>
                     <th>Cell</th>
                     <th>Email</th>
-                    <th>Query</th>
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Domain</th>
+                    <th>Code</th>
+                    <th>Hosting</th>
                     <th>Status</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="tbody">
 
 
                   </tbody>
@@ -157,7 +161,11 @@
                     <th>name</th>
                     <th>Cell</th>
                     <th>Email</th>
-                    <th>Query</th>
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Domain</th>
+                    <th>Code</th>
+                    <th>Hosting</th>
                     <th>Status</th>
                   </tr>
                   </tfoot>
@@ -231,3 +239,43 @@
 </script>
 </body>
 </html>
+<script>
+  var tbody = document.getElementById("tbody");
+
+  var queries=[];
+  qoutes=JSON.parse(localStorage.getItem("qoutes"))
+  qoutes.forEach(element => {
+    console.log(element);
+    var cell=document.createElement("td")
+    cell.innerHTML=element.cell
+    var email=document.createElement("td")
+    email.innerHTML=element.email
+    var name=document.createElement("td")
+    name.innerHTML=element.name
+    var description=document.createElement("td")
+    description.innerHTML=element.description
+    var service=document.createElement("td")
+    service.innerHTML=element.service
+
+    var domain=document.createElement("td")
+    domain.innerHTML=element.domain
+    var code=document.createElement("td")
+    code.innerHTML=element.code
+    var hosting=document.createElement("td")
+    hosting.innerHTML=element.hosting
+
+    var status=document.createElement("td")
+    status.innerHTML=element.status
+    var tr=document.createElement("tr")
+    tr.appendChild(name);
+    tr.appendChild(cell);
+    tr.appendChild(email);
+    tr.appendChild(service);
+    tr.appendChild(description);
+    tr.appendChild(domain);
+    tr.appendChild(code);
+    tr.appendChild(hosting);
+    tr.appendChild(status);
+    document.getElementById("tbody").appendChild(tr);
+  });
+</script>

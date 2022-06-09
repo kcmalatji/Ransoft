@@ -148,16 +148,8 @@
                     <th>Status</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  <tr>
-                    <td>Click2eat</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
+                  <tbody id="tbody">
+                
                 
                   </tbody>
                   <tfoot>
@@ -239,3 +231,30 @@
 </script>
 </body>
 </html>
+<script>
+  var tbody = document.getElementById("tbody");
+
+  var queries=[];
+  partners=JSON.parse(localStorage.getItem("partners"))
+  partners.forEach(element => {
+    var cell=document.createElement("td")
+    cell.innerHTML=element.cell
+    var email=document.createElement("td")
+    email.innerHTML=element.email
+    var name=document.createElement("td")
+    name.innerHTML=element.name
+
+    var owner=document.createElement("td")
+    owner.innerHTML=element.owner
+
+    var status=document.createElement("td")
+    status.innerHTML=element.status
+    var tr=document.createElement("tr")
+    tr.appendChild(name);
+    tr.appendChild(cell);
+    tr.appendChild(email);
+    tr.appendChild(owner);
+    tr.appendChild(status);
+    document.getElementById("tbody").appendChild(tr);
+  });
+</script>

@@ -45,17 +45,43 @@
     var db = firebase.firestore();
     var queryRef = db.collection("ransoftqueries")
     var qouteRef = db.collection("ransoftqoute")
+    var partnerRef = db.collection("ransoftparner")
+    var complainRef = db.collection("ransoftcomplains")
+    var queries = [];
+    var qoutes = [];
+    var partners = [];
+    var complains = [];
+
+    queryRef.get().then((docs) => {
+      docs.forEach(element => {
+        queries.push(element.data());
+      });
+      document.getElementById("querysize").innerHTML = queries.length;
+      localStorage.setItem("queries", JSON.stringify(queries))
+    })
+    qouteRef.get().then((docs) => {
+      docs.forEach(element => {
+        qoutes.push(element.data());
+      });
+      document.getElementById("qoutessize").innerHTML = qoutes.length;
+      localStorage.setItem("qoutes", JSON.stringify(qoutes))
+    })
+    partnerRef.get().then((docs) => {
+      docs.forEach(element => {
+        partners.push(element.data());
+      });
+      document.getElementById("partnerssize").innerHTML = partners.length;
+      localStorage.setItem("partners", JSON.stringify(partners))
+    })
+    complainRef.get().then((docs) => {
+      docs.forEach(element => {
+        complains.push(element.data());
+      });
+      document.getElementById("complainssize").innerHTML = complains.length;
+      localStorage.setItem("complains", JSON.stringify(complains))
+    })
 
 
-    queryRef.on("value", function(snapshot) {
- snapshot.forEach(function(childSnapshot) {
-  var childData = childSnapshot.val();
-  var id=childData.id;
-  console.log(childData);
- });
-});
-    
-   
   </script>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -206,7 +232,7 @@
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>3</h3>
+                  <h3 id="querysize"></h3>
 
                   <p>Queries</p>
                 </div>
@@ -222,7 +248,7 @@
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>2<sup style="font-size: 20px"></sup></h3>
+                  <h3 id="qoutessize"><sup style="font-size: 20px"></sup></h3>
 
                   <p>Qoutes Request</p>
                 </div>
@@ -238,7 +264,7 @@
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>1</h3>
+                  <h3 id="partnerssize"></h3>
 
                   <p>Partners</p>
                 </div>
@@ -254,7 +280,7 @@
               <!-- small box -->
               <div class="small-box bg-danger">
                 <div class="inner">
-                  <h3>0</h3>
+                  <h3 id="complainssize"></h3>
 
                   <p>Complains</p>
                 </div>
